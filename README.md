@@ -14,7 +14,9 @@ String, mientras que las validaciones de negocio se enfocan en reglas de negocio
 email no exista ya dentro de la base de datos
 
 ### 3. Explique la diferencia entre autenticación, autorización e integridad.
-
+Una autenticación es el proceso de vrificar la identidad de un usuario  , mirentras que una autorización 
+ocurre depues de la autenticación y sirve para dar permisoso o definicion de roles en cambio una integridad
+es la seguridad de que los datos no se modificaran de marena errornea 
 
 ### 4. Genere el diagrama de componentes general del sistema ECIXPRESS
 
@@ -22,12 +24,15 @@ email no exista ya dentro de la base de datos
 
 ### 5. ¿Qué problemas pueden surgir si no se separan correctamente las capas dentro de un proyecto de software?
 
+Alto acoplamiento , Baja Mantenibilidad , dificultada para escalar , problemas en pruebas y codigo 
+
 ### 6. Genere el diagrama de componentes específicos del sistema ECIXPRESS
 
 ![Diagrama de componentes específico](./docs/uml/Diagramadecomponentesespecifico.png)
 
 ### 7. ¿Cuáles son las diferencias entre un validador, una utilidad y un servicio?
-
+Un validador es el ecargado de verificar que los datos cumplan x reglas , una ultilidad es donde se contienen las 
+funciones reutilizables y un sercivicio es una logica de negocio donde se hacen las operaciones entre clases
 
 ### 8. Genere el diagrama de clases de los modelos y responda: ¿Qué patrón de software usaría para manejar los estados del pedido y por qué?
 
@@ -49,7 +54,8 @@ email no exista ya dentro de la base de datos
 ![ModeloEntidadRelacion.png](docs%2Fuml%2FModeloEntidadRelacion.png)
 
 ### 10.Proponga 2 índices que mejoren el rendimiento de las consultas de ECIXPRESS y establezca con un criterio técnico el porque dan valor a la solución
-
+Indicar sobre user_id en la tabla de pedidos (orders):asi nos permite consultar de manera mas rapida los perdidos del usuario
+Indice sobre product_id en la tabla de detalles del pedido: Optimiza las consultas relacionadas con productos dentro de estos pedidos (el carrito )
 ### 11.Como parte de la solución, es fundamental definir un conjunto robusto de pruebas que garantice la calidad y correcto funcionamiento de las funcionalidades expuestas en el sistema. Dado el enfoque de transparencia con el cliente, se requiere evidenciar cómo se desarrollaría la funcionalidad de “Solicitar pedido” siguiendo el enfoque de TDD (Test Driven Development). En este contexto, se espera que usted:
 
 #### Describa cómo se aplican las fases de TDD (Red, Green, Refactor) en la implementación de esta funcionalidad.
