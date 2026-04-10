@@ -83,6 +83,13 @@ reglas de negocio de esta manera pudiendo reportar e identificar de manera tempr
 poder cumplir con las reglas de negocio y la integridad del sistema
 
 ### 13. Nuestro cliente quiere automatizar el proceso del ciclo de vida de la aplicación; sin embargo, necesita entender cómo funciona, describa las etapas principales de un pipeline y en qué consiste cada una
--
 
+
+### 16. Como parte del MVP, el cliente requiere una validación visual del producto. Diseñe en Figma las pantallas necesarias para el flujo de:
+https://www.figma.com/design/zCJnlXzGKHPl0u0S6uR1LC/Sin-t%C3%ADtulo?node-id=0-1&p=f&t=Xdzgsu4wNFWndaHS-0
+
+
+## puntos adicionales
+- Daniel Rayo: +0.7 de segundo puesto en la clase de la biblioteca parte 3, +0.2 en esa misma clase, +0.6 de los 3 ejercicios de la bitacora
+- Daniel Peña: +0.6 del refuerzo de la bitacora
 ## Daniel Felipe Rayo Rodriguez - Daniel Peña Bonilla GRUPO 1
