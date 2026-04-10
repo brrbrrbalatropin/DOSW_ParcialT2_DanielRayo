@@ -1,3 +1,41 @@
 spring:
   application:
-    name: DOSW-ParcialT2
+    name: SportLife-API
+
+  # (PostgreSQL)
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sportlife_db
+    username: admin
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # (MongoDB)
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/sportlife_mongo
+
+
+logging:
+  level:
+    root: INFO
+    edu.dosw.parcial: DEBUG
+    org.hibernate.SQL: DEBUG
+
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+jwt:
+  secret: tu_clave_secreta_super_segura_de_32_caracteres_minimo
+  expiration: 3600000 # 1 hora
