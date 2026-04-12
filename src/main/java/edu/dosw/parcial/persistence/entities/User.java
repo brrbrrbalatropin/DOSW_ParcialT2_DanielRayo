@@ -4,22 +4,23 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.nio.file.FileStore;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
 @Table(name = "users")
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     private String name;
-
+    @Column(unique = true, nullable = false)
     private String email;
 
     private String password;
@@ -27,6 +28,8 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
     public void SetName(String name) {
     }

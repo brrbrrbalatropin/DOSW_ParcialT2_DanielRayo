@@ -2,27 +2,27 @@ package edu.dosw.parcial.persistence.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "carts")
-@Builder
+@Table(name = "cart_items")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cart {
+public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
 
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
-    private List<CartItem> items;
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
 
-    private Double total;
+    private Integer quantity;
+    private Double subtotal;
 }
